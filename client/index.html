@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <link rel="stylesheet" href="client/styles/all.css" />
+      <link rel="stylesheet" href="client/styles/style.css" />
+      <title>SPA</title>
+   </head>
+   <body>
+      <div class="main-layout">
+         <nav class="nav">
+            <div class="nav__logo">SPA</div>
+            <ul class="nav__items">
+               <li class="nav__item">
+                  <a href="/" data-link class="nav__link">
+                     <span class="icon-container">
+                        <i class="fas fa-tachometer-alt"></i>
+                     </span>
+                     <span class="nav__item-label">دشبورد</span>
+                  </a>
+               </li>
+               <li class="nav__item">
+                  <a href="/products" data-link class="nav__link">
+                     <span class="icon-container">
+                        <i class="fab fa-product-hunt"></i>
+                     </span>
+                     <span class="nav__item-label">محصولات</span>
+                  </a>
+               </li>
+               <li class="nav__item">
+                  <a href="/orders" data-link class="nav__link">
+                     <span class="icon-container">
+                        <i class="fas fa-shopping-basket"></i>
+                     </span>
+                     <span class="nav__item-label">سفارشات</span>
+                  </a>
+               </li>
+               <li class="nav__item">
+                <a href="/posts" data-link class="nav__link">
+                   <span class="icon-container">
+                      <i class="fab fa-blogger-b"></i>
+                   </span>
+                   <span class="nav__item-label">پست ها</span>
+                </a>
+             </li>
+            </ul>
+            <div class="app-version">
+                <span class="app-version__label">SPA v.1</span>
+                <span class="icon-container sidebar-toggler">
+                    <i class="fas fa-chevron-right"></i>
+                 </span>
+            </div>
+         </nav>
+         <main id="app"></main>
+         <p class="app-developer">By <a href="https://ellefamkar.ir">Elle Famkar</a></p>
+      </div>
+      <script src="client/app.js" type="module"></script>
+   </body>
+</html>

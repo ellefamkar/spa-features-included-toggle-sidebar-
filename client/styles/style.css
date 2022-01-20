@@ -1,0 +1,132 @@
+@font-face {
+   font-family: "Vazir-FD";
+   src: url("../font/Vazir-Regular-FD.woff");
+}
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Vazir-FD";
+   list-style: none;
+}
+:root {
+   --mainBlack: #000000;
+   --bodyColor: #cacaca;
+   --mainGray: #999999;
+   --nav-width: 250px;
+   --mainWhite: #ffffff;
+}
+body {
+   font-family: "Vazir-FD";
+   background-color: var(--bodyColor);
+   color: var(--mainBlack);
+   direction: rtl;
+}
+.main-layout {
+   display: flex;
+}
+.nav {
+   height: 100vh;
+   width: var(--nav-width);
+   background-color: var(--mainWhite);
+   padding: 0.5rem;
+   position: sticky;
+   top: 0;
+   right: 0;
+   border-radius: 100px 0 0 0;
+   background: linear-gradient(180deg, #324467, #283142);
+   display: flex;
+   flex-direction: column;
+   transition: all 0.3s ease-out;
+}
+.nav__items {
+   flex-grow: 1;
+   overflow-y: auto;
+}
+.nav__items::-webkit-scrollbar {
+   display: none;
+}
+.nav__item {
+   margin: 5px 0;
+}
+.nav__logo {
+   text-transform: uppercase;
+   letter-spacing: 0.2rem;
+   font-size: 3rem;
+   font-weight: 800;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+   color: var(--mainWhite);
+   padding: 2rem 0;
+   text-align: center;
+}
+.nav__link {
+   text-decoration: none;
+   color: var(--mainGray);
+   padding: 12px 8px;
+   transition: all 0.3 ease-in-out;
+   display: flex;
+   align-items: center;
+}
+.nav__link:hover {
+   background-color: #ffffff21;
+   color: #ffffff;
+   border-radius: 1.5rem;
+}
+.nav__link span,
+.nav__link i {
+   z-index: -1;
+}
+.nav__item-label {
+   margin-right: 15px;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: hidden;
+}
+#app {
+   /* height: 200vh; */
+   padding: 1rem;
+}
+.app-version {
+   color: #ffffff;
+   padding-top: 10px;
+   border-top: 1px solid rgba(255, 255, 255, 0.2);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.icon-container {
+   font-size: 1.2rem;
+   cursor: pointer;
+}
+.mini-sidebar.nav {
+   overflow: hidden;
+}
+.mini-sidebar.nav .nav__link:hover {
+   background-color: transparent;
+   color: var(--mainWhite);
+}
+.nav.mini-sidebar .nav__logo {
+   font-size: 1rem;
+}
+.nav.mini-sidebar .app-version__label {
+   display: none;
+}
+.sidebar-toggler {
+   transition: all 0.3 ease-in-out;
+}
+.nav.mini-sidebar .sidebar-toggler i {
+   transform: rotate(180deg);
+   margin-right: 10px;
+}
+.app-developer{
+   position: absolute;
+   left: 10px;
+   bottom: 10px;
+   color: #324467;
+   font-weight: 200;
+}
+.app-developer a{
+   text-decoration: none;
+   color: #324467;
+   font-weight: 800;
+}
